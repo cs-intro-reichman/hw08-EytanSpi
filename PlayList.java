@@ -131,6 +131,7 @@ class PlayList {
         for (int i = 0; i < other.size; i++) {
             this.add(other.tracks[i]);
         }
+        this.size += other.size;
     }
 
     /** Returns the index in this list of the track that has the shortest duration,
@@ -164,7 +165,7 @@ class PlayList {
      *  the list on which it was called (this list). */
     public void sortedInPlace() {
         // Uses the selection sort algorithm,  
-        // calling the minIndex method in each iteration.
+        // calling the minIndex method win each iteration.
         for(int i = 0; i < size; i++) {
             Track temp = this.tracks[i];
             int minIndex = this.minIndex(i);
